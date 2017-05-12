@@ -73,6 +73,12 @@ BuildRequires:	cmake(KF5Tnef)
 BuildRequires:	cmake(MailTransportDBusService)
 Requires:	kdepim-runtime
 Suggests:	kdepim-addons
+Suggests:	pinentry-qt5
+Suggests:	ksshaskpass
+Requires:	sasl-plug-plain
+Requires:	sasl-plug-ntlm
+Requires:	sasl-plug-login
+Requires:	sasl-plug-digestmd5
 Requires:	akonadi-archivemail-agent
 Requires:	akonadi-followupreminder-agent
 Requires:	akonadi-import-wizard
@@ -83,8 +89,9 @@ Requires:	ktnef
 Requires:	mbox-importer
 Requires:	pim-data-exporter
 Requires:	pim-sieve-editor
-Requires:	pim-storage-service-manager
-Obsoletes:	kdepim < 3:17.04
+Obsoletes:	kdepim < 3:17.04.0
+Provides:	kmail2 = %{EVRD}
+Obsoletes:	messageviewer
 
 %description
 KMail is the email component of Kontact, the integrated personal
@@ -101,9 +108,10 @@ information manager of KDE.
 %{_datadir}/kontact/ksettingsdialog/kmail.setdlg
 %{_datadir}/kontact/ksettingsdialog/summary.setdlg
 %{_datadir}/messageviewer/about/default/introduction_kmail.html
-%{_docdir}/*/*/kmail
+%{_docdir}/*/*/kmail2
+%{_iconsdir}/hicolor/*/emblems/*.svg
 %{_iconsdir}/hicolor/*/apps/kmail.*
-%{_kde5_notificationsdir}/kmail2.notifyrc
+%{_datadir}/knotifications5/kmail2.notifyrc
 %{_kde5_services}/kcm_kpimidentities.desktop
 %{_kde5_services}/kcmkmailsummary.desktop
 %{_kde5_services}/kcmkontactsummary.desktop
@@ -140,7 +148,7 @@ Akonadi archivemail agent.
 %{_datadir}/akonadi/agents/archivemailagent.desktop
 %{_datadir}/config.kcfg/archivemailagentsettings.kcfg
 %{_docdir}/*/*/akonadi_archivemail_agent
-%{_kde5_notificationsdir}/akonadi_archivemail_agent.notifyrc
+%{_datadir}/knotifications5/akonadi_archivemail_agent.notifyrc
 
 #-----------------------------------------------------------------------------
 
@@ -156,7 +164,7 @@ answered.
 %{_bindir}/akonadi_followupreminder_agent
 %{_datadir}/akonadi/agents/followupreminder.desktop
 %{_docdir}/*/*/akonadi_followupreminder_agent
-%{_kde5_notificationsdir}/akonadi_followupreminder_agent.notifyrc
+%{_datadir}/knotifications5/akonadi_followupreminder_agent.notifyrc
 
 #-----------------------------------------------------------------------------
 
@@ -170,7 +178,7 @@ Akonadi mailfilter agent.
 %files -n akonadi-mailfilter-agent -f akonadi_mailfilter_agent.lang
 %{_bindir}/akonadi_mailfilter_agent
 %{_datadir}/akonadi/agents/mailfilteragent.desktop
-%{_kde5_notificationsdir}/akonadi_mailfilter_agent.notifyrc
+%{_datadir}/knotifications5/akonadi_mailfilter_agent.notifyrc
 
 #-----------------------------------------------------------------------------
 
@@ -185,7 +193,7 @@ Akonadi sendlater agent.
 %{_bindir}/akonadi_sendlater_agent
 %{_datadir}/akonadi/agents/sendlateragent.desktop
 %{_docdir}/*/*/akonadi_sendlater_agent
-%{_kde5_notificationsdir}/akonadi_sendlater_agent.notifyrc
+%{_datadir}/knotifications5/akonadi_sendlater_agent.notifyrc
 
 #----------------------------------------------------------------------------
 
