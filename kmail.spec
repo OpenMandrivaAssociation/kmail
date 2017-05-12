@@ -90,7 +90,7 @@ Obsoletes:	kdepim < 3:17.04
 KMail is the email component of Kontact, the integrated personal
 information manager of KDE.
 
-%files
+%files -f %{name}.lang
 %{_kde5_applicationsdir}/kmail_view.desktop
 %{_kde5_applicationsdir}/org.kde.kmail.desktop
 %{_bindir}/kmail
@@ -135,7 +135,7 @@ Group:		Graphical desktop/KDE
 %description -n akonadi-archivemail-agent
 Akonadi archivemail agent.
 
-%files -n akonadi-archivemail-agent
+%files -n akonadi-archivemail-agent -f akonadi_archivemail_agent.lang
 %{_bindir}/akonadi_archivemail_agent
 %{_datadir}/akonadi/agents/archivemailagent.desktop
 %{_datadir}/config.kcfg/archivemailagentsettings.kcfg
@@ -152,7 +152,7 @@ Group:		Graphical desktop/KDE
 Akonadi followup reminder agent allows to remind you when an email was not
 answered.
 
-%files -n akonadi-followupreminder-agent
+%files -n akonadi-followupreminder-agent -f akonadi_followupreminder_agent.lang
 %{_bindir}/akonadi_followupreminder_agent
 %{_datadir}/akonadi/agents/followupreminder.desktop
 %{_docdir}/*/*/akonadi_followupreminder_agent
@@ -167,7 +167,7 @@ Group:		Graphical desktop/KDE
 %description -n akonadi-mailfilter-agent
 Akonadi mailfilter agent.
 
-%files -n akonadi-mailfilter-agent
+%files -n akonadi-mailfilter-agent -f akonadi_mailfilter_agent.lang
 %{_bindir}/akonadi_mailfilter_agent
 %{_datadir}/akonadi/agents/mailfilteragent.desktop
 %{_kde5_notificationsdir}/akonadi_mailfilter_agent.notifyrc
@@ -181,7 +181,7 @@ Group:		Graphical desktop/KDE
 %description -n akonadi-sendlater-agent
 Akonadi sendlater agent.
 
-%files -n akonadi-sendlater-agent
+%files -n akonadi-sendlater-agent -f akonadi_sendlater_agent.lang
 %{_bindir}/akonadi_sendlater_agent
 %{_datadir}/akonadi/agents/sendlateragent.desktop
 %{_docdir}/*/*/akonadi_sendlater_agent
@@ -198,7 +198,7 @@ The TNEF file viewer allows you to handle mail attachments using the TNEF
 format. These attachments are usually found in mails coming from Microsoft
 mail servers and embed the mail properties as well as the actual attachments.
 
-%files -n ktnef
+%files -n ktnef -f ktnef.lang
 %{_kde5_applicationsdir}/org.kde.ktnef.desktop
 %{_bindir}/ktnef
 %{_docdir}/*/*/ktnef
@@ -232,3 +232,11 @@ KDE PIM shared library.
 
 %install
 %ninja_install -C build
+
+
+%find_lang akonadi_archivemail_agent
+%find_lang akonadi_followupreminder_agent
+%find_lang akonadi_mailfilter_agent
+%find_lang akonadi_sendlater_agent
+%find_lang %{name}
+%find_lang ktnef
