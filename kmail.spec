@@ -26,7 +26,6 @@ BuildRequires:	cmake(KF5Bookmarks)
 BuildRequires:	cmake(KF5Codecs)
 BuildRequires:	cmake(KF5Config)
 BuildRequires:	cmake(KF5ConfigWidgets)
-BuildRequires:	cmake(KF5Crash
 BuildRequires:	cmake(KF5DBusAddons)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5GuiAddons)
