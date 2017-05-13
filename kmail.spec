@@ -1,7 +1,7 @@
 Summary:	KDE email client
 Name:		kmail
 Version:	17.04.0
-Release:	1
+Release:	2
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -92,6 +92,10 @@ Requires:	pim-sieve-editor
 Obsoletes:	kdepim < 3:17.04.0
 Provides:	kmail2 = %{EVRD}
 Obsoletes:	messageviewer
+Conflicts:	kontact < 3:17.04.0
+Conflicts:	kaddressbook < 3:17.04.0
+Conflicts:	knotes < 3:17.04.0
+Conflicts:	korganizer < 3:17.04.0
 
 %description
 KMail is the email component of Kontact, the integrated personal
