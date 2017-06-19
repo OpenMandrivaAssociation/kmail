@@ -1,12 +1,12 @@
 Summary:	KDE email client
 Name:		kmail
-Version:	17.04.0
-Release:	2
+Version:	17.04.2
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
-Source0:	ftp://ftp.kde.org/pub/kde/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	boost-devel
 BuildRequires:	openldap-devel
