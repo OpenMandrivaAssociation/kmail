@@ -1,6 +1,6 @@
 Summary:	KDE email client
 Name:		kmail
-Version:	17.08.3
+Version:	17.11.90
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -111,7 +111,6 @@ information manager of KDE.
 %{_datadir}/kmail2/*
 %{_datadir}/kontact/ksettingsdialog/kmail.setdlg
 %{_datadir}/kontact/ksettingsdialog/summary.setdlg
-%{_datadir}/messageviewer/about/default/introduction_kmail.html
 %{_docdir}/*/*/kmail2
 %{_iconsdir}/*/*/emblems/*.svg
 %{_iconsdir}/*/*/apps/kmail.*
@@ -126,7 +125,6 @@ information manager of KDE.
 %{_kde5_servicetypes}/dbusmail.desktop
 %{_kde5_sysconfdir}/xdg/kmail.categories
 %{_kde5_sysconfdir}/xdg/kmail.renamecategories
-%{_kde5_xmlguidir}/kmail2/*.rc
 %{_kde5_xmlguidir}/kontactsummary/kontactsummary_part.rc
 %{_datadir}/metainfo/org.kde.kmail2.appdata.xml
 %{_datadir}/dbus-1/interfaces/org.kde.kmail.*.xml
