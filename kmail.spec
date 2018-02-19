@@ -1,12 +1,12 @@
 Summary:	KDE email client
 Name:		kmail
-Version:	17.04.0
-Release:	2
+Version:	 17.12.2
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
-Source0:	ftp://ftp.kde.org/pub/kde/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	boost-devel
 BuildRequires:	openldap-devel
@@ -103,7 +103,7 @@ information manager of KDE.
 
 %files -f %{name}.lang
 %{_kde5_applicationsdir}/kmail_view.desktop
-%{_kde5_applicationsdir}/org.kde.kmail.desktop
+%{_kde5_applicationsdir}/org.kde.kmail2.desktop
 %{_bindir}/kmail
 %{_datadir}/config.kcfg/kmail.kcfg
 %{_datadir}/kconf_update/kmail*
@@ -111,10 +111,9 @@ information manager of KDE.
 %{_datadir}/kmail2/*
 %{_datadir}/kontact/ksettingsdialog/kmail.setdlg
 %{_datadir}/kontact/ksettingsdialog/summary.setdlg
-%{_datadir}/messageviewer/about/default/introduction_kmail.html
 %{_docdir}/*/*/kmail2
-%{_iconsdir}/hicolor/*/emblems/*.svg
-%{_iconsdir}/hicolor/*/apps/kmail.*
+%{_iconsdir}/*/*/emblems/*.svg
+%{_iconsdir}/*/*/apps/kmail.*
 %{_datadir}/knotifications5/kmail2.notifyrc
 %{_kde5_services}/kcm_kpimidentities.desktop
 %{_kde5_services}/kcmkmailsummary.desktop
@@ -126,9 +125,8 @@ information manager of KDE.
 %{_kde5_servicetypes}/dbusmail.desktop
 %{_kde5_sysconfdir}/xdg/kmail.categories
 %{_kde5_sysconfdir}/xdg/kmail.renamecategories
-%{_kde5_xmlguidir}/kmail2/*.rc
 %{_kde5_xmlguidir}/kontactsummary/kontactsummary_part.rc
-%{_datadir}/metainfo/org.kde.kmail.appdata.xml
+%{_datadir}/metainfo/org.kde.kmail2.appdata.xml
 %{_datadir}/dbus-1/interfaces/org.kde.kmail.*.xml
 %{_qt5_plugindir}/kcm_kmail.so
 %{_qt5_plugindir}/kcm_kmailsummary.so

@@ -1,2 +1,4 @@
+removed_sources:
+  kmail-17.12.1.tar.xz: 2a0b0af529c750766a326fd11bf8883629eae336
 sources:
-  kmail-17.04.0.tar.xz: 2cae24486c6664f91e337e7f6aa175a9fb607a87
+  kmail-17.12.2.tar.xz: 546cf0c75730851157f1902dadea1ae2baca3466
