@@ -1,6 +1,6 @@
 Summary:	KDE email client
 Name:		kmail
-Version:	 17.12.2
+Version:	 18.04.2
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -115,7 +115,6 @@ information manager of KDE.
 %{_iconsdir}/*/*/emblems/*.svg
 %{_iconsdir}/*/*/apps/kmail.*
 %{_datadir}/knotifications5/kmail2.notifyrc
-%{_kde5_services}/kcm_kpimidentities.desktop
 %{_kde5_services}/kcmkmailsummary.desktop
 %{_kde5_services}/kcmkontactsummary.desktop
 %{_kde5_services}/kmail_*.desktop
@@ -131,7 +130,6 @@ information manager of KDE.
 %{_qt5_plugindir}/kcm_kmail.so
 %{_qt5_plugindir}/kcm_kmailsummary.so
 %{_qt5_plugindir}/kcm_kontactsummary.so
-%{_qt5_plugindir}/kcm_kpimidentities.so
 %{_qt5_plugindir}/kmailpart.so
 %{_qt5_plugindir}/kontact_kmailplugin.so
 %{_qt5_plugindir}/kontact_summaryplugin.so
@@ -209,12 +207,13 @@ format. These attachments are usually found in mails coming from Microsoft
 mail servers and embed the mail properties as well as the actual attachments.
 
 %files -n ktnef -f ktnef.lang
+%{_sysconfdir}/xdg/ktnefapps.categories
+%{_sysconfdir}/xdg/ktnefapps.renamecategories
 %{_kde5_applicationsdir}/org.kde.ktnef.desktop
 %{_bindir}/ktnef
 %{_docdir}/*/*/ktnef
 %{_iconsdir}/*/*/actions/ktnef_extract_*.*
 %{_iconsdir}/*/*/apps/ktnef.*
-%{_sysconfdir}/xdg/ktnef.categories
 
 #----------------------------------------------------------------------------
 
