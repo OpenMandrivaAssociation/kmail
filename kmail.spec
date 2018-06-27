@@ -72,6 +72,7 @@ BuildRequires:	cmake(KF5SendLater)
 BuildRequires:	cmake(KF5TemplateParser)
 BuildRequires:	cmake(KF5Tnef)
 BuildRequires:	cmake(MailTransportDBusService)
+BuildRequires:	cmake(QGpgme)
 Requires:	kdepim-runtime
 Suggests:	kdepim-addons
 Suggests:	pinentry-qt5
