@@ -1,6 +1,6 @@
 Summary:	KDE email client
 Name:		kmail
-Version:	 18.04.2
+Version:	18.04.2
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -30,6 +30,7 @@ BuildRequires:	cmake(KF5DBusAddons)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5GuiAddons)
 BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5IconThemes)
 BuildRequires:	cmake(KF5ItemViews)
 BuildRequires:	cmake(KF5JobWidgets)
 BuildRequires:	cmake(KF5KIO)
