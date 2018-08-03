@@ -2,7 +2,7 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	18.07.80
+Version:	18.07.90
 Release:	1
 Epoch:		3
 License:	GPLv2+
