@@ -2,7 +2,7 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	18.08.3
+Version:	18.11.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -88,6 +88,7 @@ Requires:	akonadi-followupreminder-agent
 Requires:	akonadi-import-wizard
 Requires:	akonadi-mailfilter-agent
 Requires:	akonadi-sendlater-agent
+Requires:	akonadi-unifiedmailbox-agent
 Requires:	grantlee-editor
 Requires:	ktnef
 Requires:	mbox-importer
@@ -124,7 +125,6 @@ information manager of KDE.
 %{_kde5_services}/kmail_*.desktop
 %{_kde5_services}/kontact/kmailplugin.desktop
 %{_kde5_services}/kontact/summaryplugin.desktop
-%{_kde5_services}/ServiceMenus/kmail_addattachmentservicemenu.desktop
 %{_kde5_servicetypes}/dbusmail.desktop
 %{_kde5_sysconfdir}/xdg/kmail.categories
 %{_kde5_sysconfdir}/xdg/kmail.renamecategories
@@ -199,6 +199,19 @@ Akonadi sendlater agent.
 %{_docdir}/*/*/akonadi_sendlater_agent
 %{_datadir}/knotifications5/akonadi_sendlater_agent.notifyrc
 
+#-----------------------------------------------------------------------------
+
+%package -n akonadi-unifiedmailbox-agent
+Summary:	Akonadi unified mailbox agent
+Group:		Graphical desktop/KDE
+
+%description -n akonadi-unifiedmailbox-agent
+Akonadi unified mailbox agent.
+
+%files -n akonadi-unifiedmailbox-agent -f akonadi_unifiedmailbox_agent.lang
+%{_bindir}/akonadi_unifiedmailbox_agent
+%{_datadir}/akonadi/agents/unifiedmailboxagent.desktop
+
 #----------------------------------------------------------------------------
 
 %package -n ktnef
@@ -251,5 +264,6 @@ KDE PIM shared library.
 %find_lang akonadi_followupreminder_agent
 %find_lang akonadi_mailfilter_agent
 %find_lang akonadi_sendlater_agent
+%find_lang akonadi_unifiedmailbox_agent
 %find_lang %{name}
 %find_lang ktnef
