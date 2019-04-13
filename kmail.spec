@@ -2,8 +2,8 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	18.12.3
-Release:	2
+Version:	19.04.0
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -153,6 +153,7 @@ Akonadi archivemail agent.
 %{_datadir}/config.kcfg/archivemailagentsettings.kcfg
 %{_docdir}/*/*/akonadi_archivemail_agent
 %{_datadir}/knotifications5/akonadi_archivemail_agent.notifyrc
+%{_qt5_plugindir}/akonadi/config/archivemailagentconfig.so
 
 #-----------------------------------------------------------------------------
 
@@ -169,6 +170,7 @@ answered.
 %{_datadir}/akonadi/agents/followupreminder.desktop
 %{_docdir}/*/*/akonadi_followupreminder_agent
 %{_datadir}/knotifications5/akonadi_followupreminder_agent.notifyrc
+%{_qt5_plugindir}/akonadi/config/followupreminderagentconfig.so
 
 #-----------------------------------------------------------------------------
 
