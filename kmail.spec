@@ -2,7 +2,7 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	19.04.3
+Version:	19.07.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -109,10 +109,12 @@ Conflicts:	korganizer < 3:17.04.0
 KMail is the email component of Kontact, the integrated personal
 information manager of KDE.
 
-%files -f %{name}.lang
+%files -f %{name}.lang -f kmail-refresh-settings.lang
 %{_kde5_applicationsdir}/kmail_view.desktop
 %{_kde5_applicationsdir}/org.kde.kmail2.desktop
+%{_datadir}/applications/org.kde.kmail-refresh-settings.desktop
 %{_bindir}/kmail
+%{_bindir}/kmail-refresh-settings
 %{_datadir}/config.kcfg/kmail.kcfg
 %{_datadir}/kconf_update/kmail*
 %dir %{_datadir}/kmail2
@@ -129,8 +131,8 @@ information manager of KDE.
 %{_kde5_services}/kontact/kmailplugin.desktop
 %{_kde5_services}/kontact/summaryplugin.desktop
 %{_kde5_servicetypes}/dbusmail.desktop
-%{_kde5_sysconfdir}/xdg/kmail.categories
-%{_kde5_sysconfdir}/xdg/kmail.renamecategories
+%{_datadir}/qlogging-categories5/kmail.categories
+%{_datadir}/qlogging-categories5/kmail.renamecategories
 %{_kde5_xmlguidir}/kontactsummary/kontactsummary_part.rc
 %{_datadir}/metainfo/org.kde.kmail2.appdata.xml
 %{_datadir}/dbus-1/interfaces/org.kde.kmail.*.xml
@@ -229,8 +231,8 @@ format. These attachments are usually found in mails coming from Microsoft
 mail servers and embed the mail properties as well as the actual attachments.
 
 %files -n ktnef -f ktnef.lang
-%{_sysconfdir}/xdg/ktnefapps.categories
-%{_sysconfdir}/xdg/ktnefapps.renamecategories
+%{_datadir}/qlogging-categories5/ktnefapps.categories
+%{_datadir}/qlogging-categories5/ktnefapps.renamecategories
 %{_kde5_applicationsdir}/org.kde.ktnef.desktop
 %{_bindir}/ktnef
 %{_docdir}/*/*/ktnef
@@ -271,4 +273,5 @@ KDE PIM shared library.
 %find_lang akonadi_sendlater_agent
 %find_lang akonadi_unifiedmailbox_agent
 %find_lang %{name}
+%find_lang %{name}-refresh-settings
 %find_lang ktnef
