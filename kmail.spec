@@ -2,7 +2,7 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	19.07.80
+Version:	19.07.90
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -130,12 +130,12 @@ information manager of KDE.
 %{_kde5_services}/kmail_*.desktop
 %{_kde5_services}/kontact/kmailplugin.desktop
 %{_kde5_services}/kontact/summaryplugin.desktop
-%{_kde5_servicetypes}/dbusmail.desktop
 %{_datadir}/qlogging-categories5/kmail.categories
 %{_datadir}/qlogging-categories5/kmail.renamecategories
 %{_kde5_xmlguidir}/kontactsummary/kontactsummary_part.rc
 %{_datadir}/metainfo/org.kde.kmail2.appdata.xml
 %{_datadir}/dbus-1/interfaces/org.kde.kmail.*.xml
+%{_datadir}/dbus-1/services/org.kde.kmail.service
 %{_qt5_plugindir}/kcm_kmail.so
 %{_qt5_plugindir}/kcm_kmailsummary.so
 %{_qt5_plugindir}/kcm_kontactsummary.so
