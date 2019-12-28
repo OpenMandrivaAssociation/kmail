@@ -275,6 +275,3 @@ KDE PIM shared library.
 %find_lang %{name}
 %find_lang %{name}-refresh-settings
 %find_lang ktnef
-
-# FIXME workaround for gdb 8.3.1 hang
-strip --strip-unneeded %{buildroot}%{_bindir}/*
