@@ -2,13 +2,13 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 # https://cgit.kde.org/kmail.git/patch/?id=97e165dcf5a851ee10526631d24f9af7736da2e6
 Patch0:		kmail-dont-crash-on-logout.patch
 BuildRequires:	cmake(ECM)
@@ -275,3 +275,6 @@ KDE PIM shared library.
 %find_lang %{name}
 %find_lang %{name}-refresh-settings
 %find_lang ktnef
+
+# FIXME workaround for gdb 8.3.1 hang
+strip --strip-unneeded %{buildroot}%{_bindir}/*
