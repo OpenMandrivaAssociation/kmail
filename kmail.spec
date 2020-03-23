@@ -2,7 +2,7 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	19.12.3
+Version:	20.03.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -231,8 +231,6 @@ format. These attachments are usually found in mails coming from Microsoft
 mail servers and embed the mail properties as well as the actual attachments.
 
 %files -n ktnef -f ktnef.lang
-%{_datadir}/qlogging-categories5/ktnefapps.categories
-%{_datadir}/qlogging-categories5/ktnefapps.renamecategories
 %{_kde5_applicationsdir}/org.kde.ktnef.desktop
 %{_bindir}/ktnef
 %{_docdir}/*/*/ktnef
