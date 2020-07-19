@@ -2,7 +2,7 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	20.04.3
+Version:	20.07.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -60,10 +60,7 @@ BuildRequires:	cmake(KF5MailTransportAkonadi)
 BuildRequires:	cmake(KF5PimTextEdit)
 BuildRequires:	cmake(KF5KontactInterface)
 BuildRequires:	cmake(KF5Mime)
-BuildRequires:	cmake(KF5FollowupReminder)
 BuildRequires:	cmake(KF5Gravatar)
-BuildRequires:	cmake(KF5KdepimDBusInterfaces)
-BuildRequires:	cmake(KF5LibkdepimAkonadi)
 BuildRequires:	cmake(KF5Libkleo)
 BuildRequires:	cmake(KF5LibKSieve)
 BuildRequires:	cmake(KF5MailCommon)
@@ -72,7 +69,6 @@ BuildRequires:	cmake(KF5MessageComposer)
 BuildRequires:	cmake(KF5MessageList)
 BuildRequires:	cmake(KF5MessageViewer)
 BuildRequires:	cmake(KF5PimCommonAkonadi)
-BuildRequires:	cmake(KF5SendLater)
 BuildRequires:	cmake(KF5TemplateParser)
 BuildRequires:	cmake(KF5Tnef)
 BuildRequires:	cmake(MailTransportDBusService)
@@ -141,8 +137,8 @@ information manager of KDE.
 %{_qt5_plugindir}/kcm_kmailsummary.so
 %{_qt5_plugindir}/kcm_kontactsummary.so
 %{_qt5_plugindir}/kmailpart.so
-%{_qt5_plugindir}/kontact_kmailplugin.so
-%{_qt5_plugindir}/kontact_summaryplugin.so
+%{_qt5_plugindir}/kontact5/kontact_kmailplugin.so
+%{_qt5_plugindir}/kontact5/kontact_summaryplugin.so
 
 #-----------------------------------------------------------------------------
 
