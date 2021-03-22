@@ -2,7 +2,7 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	20.12.3
+Version:	21.03.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -107,6 +107,9 @@ KMail is the email component of Kontact, the integrated personal
 information manager of KDE.
 
 %files -f %{name}.lang -f kmail-refresh-settings.lang
+%{_bindir}/akonadi_mailmerge_agent
+%{_datadir}/akonadi/agents/mailmergeagent.desktop
+%{_datadir}/knotifications5/akonadi_mailmerge_agent.notifyrc
 %{_kde5_applicationsdir}/kmail_view.desktop
 %{_kde5_applicationsdir}/org.kde.kmail2.desktop
 %{_datadir}/applications/org.kde.kmail-refresh-settings.desktop
