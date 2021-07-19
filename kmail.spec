@@ -2,7 +2,7 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	21.04.2
+Version:	21.07.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -137,12 +137,17 @@ information manager of KDE.
 %{_datadir}/metainfo/org.kde.kmail2.appdata.xml
 %{_datadir}/dbus-1/interfaces/org.kde.kmail.*.xml
 %{_datadir}/dbus-1/services/org.kde.kmail.service
-%{_qt5_plugindir}/kcm_kmail.so
-%{_qt5_plugindir}/kcm_kmailsummary.so
-%{_qt5_plugindir}/kcm_kontactsummary.so
 %{_qt5_plugindir}/kmailpart.so
 %{_qt5_plugindir}/kontact5/kontact_kmailplugin.so
 %{_qt5_plugindir}/kontact5/kontact_summaryplugin.so
+%{_qt5_plugindir}/pim/kcms/kmail/kcm_kmail_accounts.so
+%{_qt5_plugindir}/pim/kcms/kmail/kcm_kmail_appearance.so
+%{_qt5_plugindir}/pim/kcms/kmail/kcm_kmail_composer.so
+%{_qt5_plugindir}/pim/kcms/kmail/kcm_kmail_misc.so
+%{_qt5_plugindir}/pim/kcms/kmail/kcm_kmail_plugins.so
+%{_qt5_plugindir}/pim/kcms/kmail/kcm_kmail_security.so
+%{_qt5_plugindir}/pim/kcms/summary/kcmkmailsummary.so
+%{_qt5_plugindir}/pim/kcms/summary/kcmkontactsummary.so
 
 #-----------------------------------------------------------------------------
 
@@ -187,7 +192,7 @@ Group:		Graphical desktop/KDE
 %description -n akonadi-mailfilter-agent
 Akonadi mailfilter agent.
 
-%files -n akonadi-mailfilter-agent -f akonadi_mailfilter_agent.lang
+%files -n akonadi-mailfilter-agent -f akonadi_mailfilter_agent.lang -f akonadi_mailmerge_agent.lang
 %{_bindir}/akonadi_mailfilter_agent
 %{_datadir}/akonadi/agents/mailfilteragent.desktop
 %{_datadir}/knotifications5/akonadi_mailfilter_agent.notifyrc
@@ -269,6 +274,7 @@ KDE PIM shared library.
 %find_lang akonadi_archivemail_agent
 %find_lang akonadi_followupreminder_agent
 %find_lang akonadi_mailfilter_agent
+%find_lang akonadi_mailmerge_agent
 %find_lang akonadi_sendlater_agent
 %find_lang akonadi_unifiedmailbox_agent
 %find_lang %{name}
