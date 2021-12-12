@@ -2,7 +2,7 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	21.08.3
+Version:	21.12.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -117,11 +117,8 @@ information manager of KDE.
 %{_bindir}/kmail
 %{_bindir}/kmail-refresh-settings
 %{_datadir}/config.kcfg/kmail.kcfg
-%{_datadir}/kconf_update/kmail*
 %dir %{_datadir}/kmail2
 %{_datadir}/kmail2/*
-%{_datadir}/kontact/ksettingsdialog/kmail.setdlg
-%{_datadir}/kontact/ksettingsdialog/summary.setdlg
 %{_docdir}/*/*/kmail2
 %{_iconsdir}/*/*/emblems/*.svg
 %{_iconsdir}/*/*/apps/kmail.*
