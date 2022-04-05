@@ -1,9 +1,10 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+%global optflags %{optflags} -fexceptions
 
 Summary:	KDE email client
 Name:		kmail
-Version:	21.12.2
-Release:	2
+Version:	22.03.80
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -123,11 +124,6 @@ information manager of KDE.
 %{_iconsdir}/*/*/emblems/*.svg
 %{_iconsdir}/*/*/apps/kmail.*
 %{_datadir}/knotifications5/kmail2.notifyrc
-%{_kde5_services}/kcmkmailsummary.desktop
-%{_kde5_services}/kcmkontactsummary.desktop
-%{_kde5_services}/kmail_*.desktop
-%{_kde5_services}/kontact/kmailplugin.desktop
-%{_kde5_services}/kontact/summaryplugin.desktop
 %{_datadir}/qlogging-categories5/kmail.categories
 %{_datadir}/qlogging-categories5/kmail.renamecategories
 %{_kde5_xmlguidir}/kontactsummary/kontactsummary_part.rc
