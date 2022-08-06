@@ -3,7 +3,7 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	22.04.2
+Version:	22.07.90
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -131,16 +131,16 @@ information manager of KDE.
 %{_datadir}/dbus-1/interfaces/org.kde.kmail.*.xml
 %{_datadir}/dbus-1/services/org.kde.kmail.service
 %{_qt5_plugindir}/kmailpart.so
-%{_qt5_plugindir}/kontact5/kontact_kmailplugin.so
-%{_qt5_plugindir}/kontact5/kontact_summaryplugin.so
-%{_qt5_plugindir}/pim/kcms/kmail/kcm_kmail_accounts.so
-%{_qt5_plugindir}/pim/kcms/kmail/kcm_kmail_appearance.so
-%{_qt5_plugindir}/pim/kcms/kmail/kcm_kmail_composer.so
-%{_qt5_plugindir}/pim/kcms/kmail/kcm_kmail_misc.so
-%{_qt5_plugindir}/pim/kcms/kmail/kcm_kmail_plugins.so
-%{_qt5_plugindir}/pim/kcms/kmail/kcm_kmail_security.so
-%{_qt5_plugindir}/pim/kcms/summary/kcmkmailsummary.so
-%{_qt5_plugindir}/pim/kcms/summary/kcmkontactsummary.so
+%{_qt5_plugindir}/pim5/kontact/kontact_kmailplugin.so
+%{_qt5_plugindir}/pim5/kontact/kontact_summaryplugin.so
+%{_qt5_plugindir}/pim5/kcms/kmail/kcm_kmail_accounts.so
+%{_qt5_plugindir}/pim5/kcms/kmail/kcm_kmail_appearance.so
+%{_qt5_plugindir}/pim5/kcms/kmail/kcm_kmail_composer.so
+%{_qt5_plugindir}/pim5/kcms/kmail/kcm_kmail_misc.so
+%{_qt5_plugindir}/pim5/kcms/kmail/kcm_kmail_plugins.so
+%{_qt5_plugindir}/pim5/kcms/kmail/kcm_kmail_security.so
+%{_qt5_plugindir}/pim5/kcms/summary/kcmkmailsummary.so
+%{_qt5_plugindir}/pim5/kcms/summary/kcmkontactsummary.so
 
 #-----------------------------------------------------------------------------
 
@@ -157,7 +157,7 @@ Akonadi archivemail agent.
 %{_datadir}/config.kcfg/archivemailagentsettings.kcfg
 %{_docdir}/*/*/akonadi_archivemail_agent
 %{_datadir}/knotifications5/akonadi_archivemail_agent.notifyrc
-%{_qt5_plugindir}/akonadi/config/archivemailagentconfig.so
+%{_qt5_plugindir}/pim5/akonadi/config/archivemailagentconfig.so
 
 #-----------------------------------------------------------------------------
 
@@ -174,7 +174,7 @@ answered.
 %{_datadir}/akonadi/agents/followupreminder.desktop
 %{_docdir}/*/*/akonadi_followupreminder_agent
 %{_datadir}/knotifications5/akonadi_followupreminder_agent.notifyrc
-%{_qt5_plugindir}/akonadi/config/followupreminderagentconfig.so
+%{_qt5_plugindir}/pim5/akonadi/config/followupreminderagentconfig.so
 
 #-----------------------------------------------------------------------------
 
