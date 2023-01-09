@@ -3,7 +3,7 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	22.12.0
+Version:	22.12.1
 Release:	1
 Epoch:		3
 License:	GPLv2+
