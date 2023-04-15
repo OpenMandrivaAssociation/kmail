@@ -3,8 +3,8 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	22.12.3
-Release:	2
+Version:	23.03.90
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -24,7 +24,7 @@ BuildRequires:	pkgconfig(Qt5WebEngine)
 BuildRequires:	pkgconfig(Qt5WebEngineWidgets)
 BuildRequires:	pkgconfig(Qt5Xml)
 BuildRequires:	cmake(Qt5Keychain)
-BuildRequires:	cmake(KF5WebEngineViewer)
+BuildRequires:	cmake(KPim5WebEngineViewer)
 BuildRequires:	cmake(KF5AkonadiSearch)
 BuildRequires:	cmake(Gpgmepp)
 BuildRequires:	cmake(KF5Crash)
@@ -66,12 +66,12 @@ BuildRequires:	cmake(KF5Gravatar)
 BuildRequires:	cmake(KF5Libkleo)
 BuildRequires:	cmake(KF5LibKSieve)
 BuildRequires:	cmake(KF5MailCommon)
-BuildRequires:	cmake(KF5MessageCore)
-BuildRequires:	cmake(KF5MessageComposer)
-BuildRequires:	cmake(KF5MessageList)
-BuildRequires:	cmake(KF5MessageViewer)
+BuildRequires:	cmake(KPim5MessageCore)
+BuildRequires:	cmake(KPim5MessageComposer)
+BuildRequires:	cmake(KPim5MessageList)
+BuildRequires:	cmake(KPim5MessageViewer)
 BuildRequires:	cmake(KF5PimCommonAkonadi)
-BuildRequires:	cmake(KF5TemplateParser)
+BuildRequires:	cmake(KPim5TemplateParser)
 BuildRequires:	cmake(KF5Tnef)
 BuildRequires:	cmake(MailTransportDBusService)
 BuildRequires:	cmake(QGpgme)
