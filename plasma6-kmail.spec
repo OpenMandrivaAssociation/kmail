@@ -76,6 +76,7 @@ BuildRequires:	cmake(KPim6PimCommonAkonadi)
 BuildRequires:	cmake(KPim6TemplateParser)
 BuildRequires:	cmake(KPim6Tnef)
 BuildRequires:	cmake(KF6UserFeedback)
+BuildRequires:	%mklibname -d KF6UserFeedbackWidgets
 Requires:	kdepim-runtime
 Suggests:	kdepim-addons
 Suggests:	pinentry-qt6
