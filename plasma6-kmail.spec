@@ -10,8 +10,6 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kmail-%{version}.tar.xz
-# https://cgit.kde.org/kmail.git/patch/?id=97e166dcf6a861ee10626631d24f9af7736da2e6
-Patch0:		kmail-dont-crash-on-logout.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	boost-devel
 BuildRequires:	pkgconfig(ldap)
@@ -20,7 +18,7 @@ BuildRequires:	pkgconfig(Qt6DBus)
 BuildRequires:	pkgconfig(Qt6Network)
 BuildRequires:	pkgconfig(Qt6Test)
 BuildRequires:	pkgconfig(Qt6Widgets)
-BuildRequires:	pkgconfig(Qt6WebEngine)
+BuildRequires:	pkgconfig(Qt6WebEngineCore)
 BuildRequires:	pkgconfig(Qt6WebEngineWidgets)
 BuildRequires:	pkgconfig(Qt6Xml)
 BuildRequires:	cmake(Qt6Keychain)
@@ -51,20 +49,20 @@ BuildRequires:	cmake(KF6WidgetsAddons)
 BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KPim6Akonadi)
-BuildRequires:	cmake(KPim6AkonadiContact)
+BuildRequires:	cmake(KPim6AkonadiContactCore)
 BuildRequires:	cmake(KPim6AkonadiMime)
 BuildRequires:	cmake(KF6Contacts)
 BuildRequires:	cmake(KF6CalendarCore)
 BuildRequires:	cmake(KPim6CalendarUtils)
-BuildRequires:	cmake(KPim6IdentityManagement)
-BuildRequires:	cmake(KPim6Ldap)
+BuildRequires:	cmake(KPim6IdentityManagementCore)
+BuildRequires:	cmake(KPim6LdapCore)
 BuildRequires:	cmake(KPim6MailTransport)
-BuildRequires:	cmake(KF6PimTextEdit)
+BuildRequires:	cmake(KPim6TextEdit)
 BuildRequires:	cmake(KPim6KontactInterface)
 BuildRequires:	cmake(KPim6Mime)
 BuildRequires:	cmake(KPim6Gravatar)
-BuildRequires:	cmake(KF6Libkleo)
-BuildRequires:	cmake(KPim6LibKSieve)
+BuildRequires:	cmake(KPim6Libkleo)
+BuildRequires:	cmake(KPim6KSieve)
 BuildRequires:	cmake(KPim6MailCommon)
 BuildRequires:	cmake(KPim6MessageCore)
 BuildRequires:	cmake(KPim6MessageComposer)
@@ -73,9 +71,7 @@ BuildRequires:	cmake(KPim6MessageViewer)
 BuildRequires:	cmake(KPim6PimCommonAkonadi)
 BuildRequires:	cmake(KPim6TemplateParser)
 BuildRequires:	cmake(KPim6Tnef)
-BuildRequires:	cmake(MailTransportDBusService)
-BuildRequires:	cmake(QGpgme)
-BuildRequires:	cmake(KUserFeedback)
+BuildRequires:	cmake(KF6UserFeedback)
 Requires:	kdepim-runtime
 Suggests:	kdepim-addons
 Suggests:	pinentry-qt6
@@ -108,12 +104,12 @@ Conflicts:	korganizer < 3:17.04.0
 KMail is the email component of Kontact, the integrated personal
 information manager of KDE.
 
-%files -f %{name}.lang -f kmail-refresh-settings.lang
+%files -f kmail.lang -f kmail-refresh-settings.lang
 %{_bindir}/akonadi_mailmerge_agent
 %{_datadir}/akonadi/agents/mailmergeagent.desktop
 %{_datadir}/knotifications6/akonadi_mailmerge_agent.notifyrc
-%{_kde6_applicationsdir}/kmail_view.desktop
-%{_kde6_applicationsdir}/org.kde.kmail2.desktop
+%{_datadir}/applications/kmail_view.desktop
+%{_datadir}/applications/org.kde.kmail2.desktop
 %{_datadir}/applications/org.kde.kmail-refresh-settings.desktop
 %{_bindir}/kmail
 %{_bindir}/kmail-refresh-settings
@@ -126,21 +122,22 @@ information manager of KDE.
 %{_datadir}/knotifications6/kmail2.notifyrc
 %{_datadir}/qlogging-categories6/kmail.categories
 %{_datadir}/qlogging-categories6/kmail.renamecategories
-%{_kde6_xmlguidir}/kontactsummary/kontactsummary_part.rc
 %{_datadir}/metainfo/org.kde.kmail2.appdata.xml
 %{_datadir}/dbus-1/interfaces/org.kde.kmail.*.xml
 %{_datadir}/dbus-1/services/org.kde.kmail.service
-%{_qt6_plugindir}/kmailpart.so
-%{_qt6_plugindir}/pim6/kontact/kontact_kmailplugin.so
-%{_qt6_plugindir}/pim6/kontact/kontact_summaryplugin.so
-%{_qt6_plugindir}/pim6/kcms/kmail/kcm_kmail_accounts.so
-%{_qt6_plugindir}/pim6/kcms/kmail/kcm_kmail_appearance.so
-%{_qt6_plugindir}/pim6/kcms/kmail/kcm_kmail_composer.so
-%{_qt6_plugindir}/pim6/kcms/kmail/kcm_kmail_misc.so
-%{_qt6_plugindir}/pim6/kcms/kmail/kcm_kmail_plugins.so
-%{_qt6_plugindir}/pim6/kcms/kmail/kcm_kmail_security.so
-%{_qt6_plugindir}/pim6/kcms/summary/kcmkmailsummary.so
-%{_qt6_plugindir}/pim6/kcms/summary/kcmkontactsummary.so
+%{_qtdir}/plugins/kmailpart.so
+%{_qtdir}/plugins/pim6/kontact/kontact_kmailplugin.so
+%{_qtdir}/plugins/pim6/kontact/kontact_summaryplugin.so
+%{_qtdir}/plugins/pim6/kcms/kmail/kcm_kmail_accounts.so
+%{_qtdir}/plugins/pim6/kcms/kmail/kcm_kmail_appearance.so
+%{_qtdir}/plugins/pim6/kcms/kmail/kcm_kmail_composer.so
+%{_qtdir}/plugins/pim6/kcms/kmail/kcm_kmail_misc.so
+%{_qtdir}/plugins/pim6/kcms/kmail/kcm_kmail_plugins.so
+%{_qtdir}/plugins/pim6/kcms/kmail/kcm_kmail_security.so
+%{_qtdir}/plugins/pim6/kcms/summary/kcmkmailsummary.so
+%{_qtdir}/plugins/pim6/kcms/summary/kcmkontactsummary.so
+%{_libdir}/libkmailprivate.so*
+%{_libdir}/libmailfilteragentprivate.so*
 
 #-----------------------------------------------------------------------------
 
@@ -157,7 +154,7 @@ Akonadi archivemail agent.
 %{_datadir}/config.kcfg/archivemailagentsettings.kcfg
 %{_docdir}/*/*/akonadi_archivemail_agent
 %{_datadir}/knotifications6/akonadi_archivemail_agent.notifyrc
-%{_qt6_plugindir}/pim6/akonadi/config/archivemailagentconfig.so
+%{_qtdir}/plugins/pim6/akonadi/config/archivemailagentconfig.so
 
 #-----------------------------------------------------------------------------
 
@@ -174,7 +171,7 @@ answered.
 %{_datadir}/akonadi/agents/followupreminder.desktop
 %{_docdir}/*/*/akonadi_followupreminder_agent
 %{_datadir}/knotifications6/akonadi_followupreminder_agent.notifyrc
-%{_qt6_plugindir}/pim6/akonadi/config/followupreminderagentconfig.so
+%{_qtdir}/plugins/pim6/akonadi/config/followupreminderagentconfig.so
 
 #-----------------------------------------------------------------------------
 
@@ -230,31 +227,16 @@ format. These attachments are usually found in mails coming from Microsoft
 mail servers and embed the mail properties as well as the actual attachments.
 
 %files -n ktnef -f ktnef.lang
-%{_kde6_applicationsdir}/org.kde.ktnef.desktop
+%{_datadir}/applications/org.kde.ktnef.desktop
 %{_bindir}/ktnef
 %{_docdir}/*/*/ktnef
 %{_iconsdir}/*/*/actions/ktnef_extract_*.*
 %{_iconsdir}/*/*/apps/ktnef.*
 
-#----------------------------------------------------------------------------
-
-%define kmailprivate_major 6
-%define libkmailprivate %mklibname kmailprivate %{kmailprivate_major}
-
-%package -n %{libkmailprivate}
-Summary:	KDE PIM shared library
-Group:		System/Libraries
-
-%description -n %{libkmailprivate}
-KDE PIM shared library.
-
-%files -n %{libkmailprivate}
-%{_kde6_libdir}/libkmailprivate.so.%{kmailprivate_major}*
-
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n kmail-%{version}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
@@ -272,6 +254,6 @@ KDE PIM shared library.
 %find_lang akonadi_mailmerge_agent
 %find_lang akonadi_sendlater_agent
 %find_lang akonadi_unifiedmailbox_agent
-%find_lang %{name}
-%find_lang %{name}-refresh-settings
+%find_lang kmail
+%find_lang kmail-refresh-settings
 %find_lang ktnef
