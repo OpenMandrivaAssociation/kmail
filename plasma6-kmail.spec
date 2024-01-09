@@ -95,7 +95,6 @@ Requires:	plasma6-grantlee-editor
 Requires:	plasma6-ktnef
 Requires:	plasma6-mbox-importer
 Requires:	plasma6-pim-data-exporter
-Requires:	plasma6-pim-sieve-editor
 
 %description
 KMail is the email component of Kontact, the integrated personal
