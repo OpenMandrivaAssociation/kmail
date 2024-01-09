@@ -77,33 +77,25 @@ BuildRequires:	cmake(KPim6TemplateParser)
 BuildRequires:	cmake(KPim6Tnef)
 BuildRequires:	cmake(KF6UserFeedback)
 BuildRequires:	%mklibname -d KF6UserFeedbackWidgets
-Requires:	kdepim-runtime
-Suggests:	kdepim-addons
+Requires:	plasma6-kdepim-runtime
+Suggests:	plasma6-kdepim-addons
 Suggests:	pinentry-qt6
-Suggests:	ksshaskpass
+Suggests:	plasma6-ksshaskpass
 Requires:	sasl-plug-plain
 Requires:	sasl-plug-ntlm
 Requires:	sasl-plug-login
 Requires:	sasl-plug-digestmd6
-Requires:	akonadi-archivemail-agent
-Requires:	akonadi-followupreminder-agent
-Requires:	akonadi-import-wizard
-Requires:	akonadi-mailfilter-agent
-Requires:	akonadi-sendlater-agent
-Requires:	akonadi-unifiedmailbox-agent
-Requires:	grantlee
-Requires:	grantlee-editor
-Requires:	ktnef
-Requires:	mbox-importer
-Requires:	pim-data-exporter
-Requires:	pim-sieve-editor
-Obsoletes:	kdepim < 3:17.04.0
-Provides:	kmail2 = %{EVRD}
-Obsoletes:	messageviewer
-Conflicts:	kontact < 3:17.04.0
-Conflicts:	kaddressbook < 3:17.04.0
-Conflicts:	knotes < 3:17.04.0
-Conflicts:	korganizer < 3:17.04.0
+Requires:	plasma6-akonadi-archivemail-agent
+Requires:	plasma6-akonadi-followupreminder-agent
+Requires:	plasma6-akonadi-import-wizard
+Requires:	plasma6-akonadi-mailfilter-agent
+Requires:	plasma6-akonadi-sendlater-agent
+Requires:	plasma6-akonadi-unifiedmailbox-agent
+Requires:	plasma6-grantlee-editor
+Requires:	plasma6-ktnef
+Requires:	plasma6-mbox-importer
+Requires:	plasma6-pim-data-exporter
+Requires:	plasma6-pim-sieve-editor
 
 %description
 KMail is the email component of Kontact, the integrated personal
