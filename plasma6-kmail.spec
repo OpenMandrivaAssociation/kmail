@@ -1,14 +1,21 @@
+%define git 20240217
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 %global optflags %{optflags} -fexceptions
 
 Summary:	KDE email client
 Name:		plasma6-kmail
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/pim/kmail/-/archive/%{gitbranch}/kmail-%{gitbranchd}.tar.bz2#/kmail-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kmail-%{version}.tar.xz
+%endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	boost-devel
 BuildRequires:	pkgconfig(ldap)
@@ -231,7 +238,7 @@ mail servers and embed the mail properties as well as the actual attachments.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n kmail-%{version}
+%autosetup -p1 -n kmail-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
