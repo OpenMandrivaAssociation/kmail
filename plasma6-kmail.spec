@@ -6,7 +6,7 @@
 
 Summary:	KDE email client
 Name:		plasma6-kmail
-Version:	24.02.2
+Version:	24.05.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -249,13 +249,12 @@ mail servers and embed the mail properties as well as the actual attachments.
 %install
 %ninja_install -C build
 
-
 %find_lang akonadi_archivemail_agent
 %find_lang akonadi_followupreminder_agent
 %find_lang akonadi_mailfilter_agent
 %find_lang akonadi_mailmerge_agent
 %find_lang akonadi_sendlater_agent
 %find_lang akonadi_unifiedmailbox_agent
-%find_lang kmail
+%find_lang kmail --with-html
 %find_lang kmail-refresh-settings
 %find_lang ktnef
