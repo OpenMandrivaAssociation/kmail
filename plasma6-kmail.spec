@@ -6,7 +6,7 @@
 
 Summary:	KDE email client
 Name:		plasma6-kmail
-Version:	24.05.1
+Version:	24.05.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
