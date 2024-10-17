@@ -8,7 +8,7 @@ Release:	2
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://www.kde.org
+Url:		https://www.kde.org
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 # https://cgit.kde.org/kmail.git/patch/?id=97e165dcf5a851ee10526631d24f9af7736da2e6
 Patch0:		kmail-dont-crash-on-logout.patch
