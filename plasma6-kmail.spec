@@ -6,8 +6,8 @@
 
 Summary:	KDE email client
 Name:		plasma6-kmail
-Version:	24.12.3
-Release:	%{?git:0.%{git}.}3
+Version:	25.04.0
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://www.kde.org
@@ -234,6 +234,7 @@ mail servers and embed the mail properties as well as the actual attachments.
 %{_docdir}/*/*/ktnef
 %{_iconsdir}/*/*/actions/ktnef_extract_*.*
 %{_iconsdir}/*/*/apps/ktnef.*
+%{_qtdir}/plugins/pim6/akonadi/config/sendlateragentconfig.so
 
 #----------------------------------------------------------------------
 
