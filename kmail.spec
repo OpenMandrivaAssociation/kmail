@@ -5,7 +5,7 @@
 %global optflags %{optflags} -fexceptions
 
 Summary:	KDE email client
-Name:		plasma6-kmail
+Name:		kmail
 Version:	25.04.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
