@@ -6,7 +6,7 @@
 
 Summary:	KDE email client
 Name:		kmail
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -83,24 +83,26 @@ BuildRequires:	cmake(KPim6TemplateParser)
 BuildRequires:	cmake(KPim6Tnef)
 BuildRequires:	cmake(KF6UserFeedback)
 BuildRequires:	%mklibname -d KF6UserFeedbackWidgets
-Requires:	plasma6-kdepim-runtime
-Suggests:	plasma6-kdepim-addons
+Requires:	kdepim-runtime >= 6.0
+Suggests:	kdepim-addons >= 6.0
 Suggests:	pinentry-qt6
-Suggests:	plasma6-ksshaskpass
+Suggests:	ksshaskpass >= 6.0
 Requires:	sasl-plug-plain
 Requires:	sasl-plug-ntlm
 Requires:	sasl-plug-login
 Requires:	sasl-plug-digestmd5
-Requires:	plasma6-akonadi-archivemail-agent
-Requires:	plasma6-akonadi-followupreminder-agent
-Requires:	plasma6-akonadi-import-wizard
-Requires:	plasma6-akonadi-mailfilter-agent
-Requires:	plasma6-akonadi-sendlater-agent
-Requires:	plasma6-akonadi-unifiedmailbox-agent
-Requires:	plasma6-grantlee-editor
-Requires:	plasma6-ktnef
-Requires:	plasma6-mbox-importer
-Requires:	plasma6-pim-data-exporter
+Requires:	akonadi-archivemail-agent >= 6.0
+Requires:	akonadi-followupreminder-agent >= 6.0
+Requires:	akonadi-import-wizard >= 6.0
+Requires:	akonadi-mailfilter-agent >= 6.0
+Requires:	akonadi-sendlater-agent >= 6.0
+Requires:	akonadi-unifiedmailbox-agent >= 6.0
+Requires:	grantlee-editor >= 6.0
+Requires:	ktnef >= 6.0
+Requires:	mbox-importer >= 6.0
+Requires:	pim-data-exporter >= 6.0
+
+%rename plasma6-kmail
 
 %description
 KMail is the email component of Kontact, the integrated personal
@@ -143,14 +145,15 @@ information manager of KDE.
 
 #-----------------------------------------------------------------------------
 
-%package -n plasma6-akonadi-archivemail-agent
+%package -n akonadi-archivemail-agent
 Summary:	Akonadi archivemail agent
 Group:		Graphical desktop/KDE
+%rename plasma6-akonadi-archivemail-agent
 
-%description -n plasma6-akonadi-archivemail-agent
+%description -n akonadi-archivemail-agent
 Akonadi archivemail agent.
 
-%files -n plasma6-akonadi-archivemail-agent -f akonadi_archivemail_agent.lang
+%files -n akonadi-archivemail-agent -f akonadi_archivemail_agent.lang
 %{_bindir}/akonadi_archivemail_agent
 %{_datadir}/akonadi/agents/archivemailagent.desktop
 %{_datadir}/config.kcfg/archivemailagentsettings.kcfg
@@ -160,15 +163,16 @@ Akonadi archivemail agent.
 
 #-----------------------------------------------------------------------------
 
-%package -n plasma6-akonadi-followupreminder-agent
+%package -n akonadi-followupreminder-agent
 Summary:	Akonadi followupreminder agent
 Group:		Graphical desktop/KDE
+%rename plasma6-akonadi-followupreminder-agent
 
-%description -n plasma6-akonadi-followupreminder-agent
+%description -n akonadi-followupreminder-agent
 Akonadi followup reminder agent allows to remind you when an email was not
 answered.
 
-%files -n plasma6-akonadi-followupreminder-agent -f akonadi_followupreminder_agent.lang
+%files -n akonadi-followupreminder-agent -f akonadi_followupreminder_agent.lang
 %{_bindir}/akonadi_followupreminder_agent
 %{_datadir}/akonadi/agents/followupreminder.desktop
 %{_docdir}/*/*/akonadi_followupreminder_agent
@@ -177,28 +181,30 @@ answered.
 
 #-----------------------------------------------------------------------------
 
-%package -n plasma6-akonadi-mailfilter-agent
+%package -n akonadi-mailfilter-agent
 Summary:	Akonadi mailfilter agent
 Group:		Graphical desktop/KDE
+%rename plasma6-akonadi-mailfilter-agent
 
-%description -n plasma6-akonadi-mailfilter-agent
+%description -n akonadi-mailfilter-agent
 Akonadi mailfilter agent.
 
-%files -n plasma6-akonadi-mailfilter-agent -f akonadi_mailfilter_agent.lang -f akonadi_mailmerge_agent.lang
+%files -n akonadi-mailfilter-agent -f akonadi_mailfilter_agent.lang -f akonadi_mailmerge_agent.lang
 %{_bindir}/akonadi_mailfilter_agent
 %{_datadir}/akonadi/agents/mailfilteragent.desktop
 %{_datadir}/knotifications6/akonadi_mailfilter_agent.notifyrc
 
 #-----------------------------------------------------------------------------
 
-%package -n plasma6-akonadi-sendlater-agent
+%package -n akonadi-sendlater-agent
 Summary:	Akonadi sendlater agent
 Group:		Graphical desktop/KDE
+%rename plasma6-akonadi-sendlater-agent
 
-%description -n plasma6-akonadi-sendlater-agent
+%description -n akonadi-sendlater-agent
 Akonadi sendlater agent.
 
-%files -n plasma6-akonadi-sendlater-agent -f akonadi_sendlater_agent.lang
+%files -n akonadi-sendlater-agent -f akonadi_sendlater_agent.lang
 %{_bindir}/akonadi_sendlater_agent
 %{_datadir}/akonadi/agents/sendlateragent.desktop
 %{_docdir}/*/*/akonadi_sendlater_agent
@@ -206,29 +212,31 @@ Akonadi sendlater agent.
 
 #-----------------------------------------------------------------------------
 
-%package -n plasma6-akonadi-unifiedmailbox-agent
+%package -n akonadi-unifiedmailbox-agent
 Summary:	Akonadi unified mailbox agent
 Group:		Graphical desktop/KDE
+%rename plasma6-akonadi-unifiedmailbox-agent
 
-%description -n plasma6-akonadi-unifiedmailbox-agent
+%description -n akonadi-unifiedmailbox-agent
 Akonadi unified mailbox agent.
 
-%files -n plasma6-akonadi-unifiedmailbox-agent -f akonadi_unifiedmailbox_agent.lang
+%files -n akonadi-unifiedmailbox-agent -f akonadi_unifiedmailbox_agent.lang
 %{_bindir}/akonadi_unifiedmailbox_agent
 %{_datadir}/akonadi/agents/unifiedmailboxagent.desktop
 
 #----------------------------------------------------------------------------
 
-%package -n plasma6-ktnef
+%package -n ktnef
 Summary:	KDE TNEF file viewer
 Group:		Graphical desktop/KDE
+%rename plasma6-ktnef
 
-%description -n plasma6-ktnef
+%description -n ktnef
 The TNEF file viewer allows you to handle mail attachments using the TNEF
 format. These attachments are usually found in mails coming from Microsoft
 mail servers and embed the mail properties as well as the actual attachments.
 
-%files -n plasma6-ktnef -f ktnef.lang
+%files -n ktnef -f ktnef.lang
 %{_datadir}/applications/org.kde.ktnef.desktop
 %{_bindir}/ktnef
 %{_docdir}/*/*/ktnef
